@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Booking Calendar</title>
+  <link rel="stylesheet" href="booking-calendar.css">
+  <script src="booking-calendar.min.js"></script>
+</head>
+<body>
+  <div id="bookingCalendar"></div>
+
+  <script>
+    // Sample booked appointments
+    const bookedAppointments = [
+      '2024-12-23 08:00 AM',
+      '2024-12-23 09:00 AM',
+      '2024-12-23 10:00 AM',
+      '2024-12-23 11:00 AM',
+      '2024-12-23 01:00 PM', // 12/23 - only 2:30 PM, 4:00 PM, 5:30 PM available
+      '2024-12-25 08:00 AM',
+      '2024-12-25 09:00 AM',
+      '2024-12-25 10:00 AM',
+      '2024-12-25 11:00 AM',
+      '2024-12-25 01:00 PM',
+      '2024-12-25 02:30 PM',
+      '2024-12-25 04:00 PM',
+      '2024-12-25 05:30 PM', // Dec 25 fully booked
+      '2025-01-01 08:00 AM',
+      '2025-01-01 09:00 AM',
+      '2025-01-01 10:00 AM',
+      '2025-01-01 11:00 AM',
+      '2025-01-01 01:00 PM',
+      '2025-01-01 02:30 PM',
+      '2025-01-01 04:00 PM',
+      '2025-12-24 05:30 PM'  // Dec 24 2025 fully booked
+    ];
+
+    // Initialize the calendar
+    const calendar = new BookingCalendar('bookingCalendar', {
+      availableTimeSlots: [
+        '08:00 AM',
+        '09:00 AM',
+        '10:00 AM',
+        '11:00 AM',
+        '01:00 PM',
+        '02:30 PM',
+        '04:00 PM',
+        '05:30 PM'
+      ],
+      bookedAppointments: bookedAppointments,
+      autoSelectNext: true, // Will auto-select next available slot (2:30 PM on Dec 23)
+      onSelectDateTime: function(dateTime) {
+        console.log('Selected:', dateTime);
+        // You can handle the selection here
+        // For example: send to API, update form, etc.
+      }
+    });
+
+    // PUBLIC API EXAMPLES:
+    // calendar.getSelectedDateTime() - Get currently selected date/time
+    // calendar.setBookedAppointments([...]) - Update booked appointments
+    // calendar.addBookedAppointment('2024-12-24 10:00 AM') - Add single booking
+    // calendar.reset() - Clear selection
+  </script>
+</body>
+</html>
