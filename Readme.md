@@ -147,6 +147,13 @@ calendar.reset();
 ## Styling & Customization
 
 The calendar uses the following CSS classes for styling:
+### You can change Calendar Primary and Background Color by overriding default CSS variables,
+```css
+.calendar-container { 
+    --primary-color: #14b8a6; 
+    --background-color: #f9fafb; 
+}
+```
 
 ### Calendar Dates:
 - `.day` - Base day style
