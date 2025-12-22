@@ -16,12 +16,12 @@ A lightweight, vanilla JavaScript booking calendar for selecting appointment dat
    <!-- CSS -->
    <link rel="stylesheet" href="path/to/booking-calendar.css">
    <!-- Or use the CDN -->
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/developerjunayed/booking-calendar-library@v1.0.0/booking-calendar.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/developerjunayed/booking-calendar-library@v1.0.1/booking-calendar.min.css">
 
    <!-- JS -->
    <script src="path/to/booking-calendar.js"></script>
    <!-- Or use the CDN -->
-   <script src="https://cdn.jsdelivr.net/gh/developerjunayed/booking-calendar-library@v1.0.0/booking-calendar.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/gh/developerjunayed/booking-calendar-library@v1.0.1/booking-calendar.min.js"></script>
    ```
 
 3. **Initialize:**
@@ -63,8 +63,8 @@ A lightweight, vanilla JavaScript booking calendar for selecting appointment dat
 <!DOCTYPE html>
 <html>
 <head>
-  <link href="https://cdn.jsdelivr.net/gh/developerjunayed/booking-calendar-library@v1.0.0/booking-calendar.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/gh/developerjunayed/booking-calendar-library@v1.0.0/booking-calendar.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/gh/developerjunayed/booking-calendar-library@v1.0.1/booking-calendar.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/gh/developerjunayed/booking-calendar-library@v1.0.1/booking-calendar.min.js"></script>
   <style>
     /* Your custom styles here */
   </style>
