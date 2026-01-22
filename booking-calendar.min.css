@@ -37,4 +37,4 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; p
 .time-slot.selected { background: var(--primary-color); color: white; font-weight: bold; box-shadow: 0 1px 2px rgba(0,0,0,0.1); }
 .time-slot.booked { background: #e5e7eb; color: #9ca3af; cursor: not-allowed; }
 .time-slot .material-symbols-outlined { font-size: 14px; }
-@media (max-width: 768px) {.calendar-container { flex-direction: column; }.calendar-section { border-right: none; border-bottom: 1px solid #e5e7eb; }.time-section { width: 100%; }}
+@media (max-width: 768px) {.calendar-container { flex-direction: column;max-height: 600px; }.calendar-section { border-right: none; border-bottom: 1px solid #e5e7eb; }.time-section { width: 100%;overflow-y: auto; }}

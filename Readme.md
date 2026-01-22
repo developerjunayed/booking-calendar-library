@@ -63,8 +63,8 @@ A lightweight, vanilla JavaScript booking calendar for selecting appointment dat
 <!DOCTYPE html>
 <html>
 <head>
-  <link href="https://cdn.jsdelivr.net/gh/developerjunayed/booking-calendar-library@v1.0.1/booking-calendar.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/gh/developerjunayed/booking-calendar-library@v1.0.1/booking-calendar.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/gh/developerjunayed/booking-calendar-library@v1.0.3/booking-calendar.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/gh/developerjunayed/booking-calendar-library@v1.0.3/booking-calendar.min.js"></script>
   <style>
     /* Your custom styles here */
   </style>
