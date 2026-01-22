@@ -9,7 +9,6 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; p
 .calendar-header button { background: none; border: none; padding: 4px; border-radius: 50%; cursor: pointer; color: #6b7280; transition: background 0.2s; }
 .calendar-header button:hover { background: #f3f4f6; }
 .calendar-header span { font-weight: bold; font-size: 16px; color: #111827; }
-.material-symbols-outlined { font-size: 20px; }
 .weekdays { display: grid; grid-template-columns: repeat(7, 1fr); margin-bottom: 8px; }
 .weekday { text-align: center; font-size: 12px; font-weight: 600; color: #9ca3af; }
 .days-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
