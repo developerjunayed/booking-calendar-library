@@ -6,6 +6,10 @@ class BookingCalendar {
             return;
         }
 
+        const nyDateString = new Date().toLocaleDateString("en-US", {
+            timeZone: "America/New_York"
+        });
+
         // Configuration
         this.config = {
             availableTimeSlots: options.availableTimeSlots || [
@@ -15,15 +19,11 @@ class BookingCalendar {
             bookedAppointments: options.bookedAppointments || [],
             onSelectDateTime: options.onSelectDateTime || null,
             autoSelectNext: options.autoSelectNext !== false, // default true
-            currentDateTime: options.currentDateTime || new Date().toLocaleDateString("en-US", {
-                timeZone: "America/New_York"
-            })
+            currentDateTime: options.currentDateTime || new Date(nyDateString)
         };
 
         // State
-        this.today = new Date().toLocaleDateString("en-US", {
-            timeZone: "America/New_York"
-        });
+        this.today = new Date(nyDateString);
         this.today.setHours(0, 0, 0, 0);
 
         this.state = {
