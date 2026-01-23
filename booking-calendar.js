@@ -15,11 +15,15 @@ class BookingCalendar {
             bookedAppointments: options.bookedAppointments || [],
             onSelectDateTime: options.onSelectDateTime || null,
             autoSelectNext: options.autoSelectNext !== false, // default true
-            currentDateTime: options.currentDateTime || new Date()
+            currentDateTime: options.currentDateTime || new Date().toLocaleDateString("en-US", {
+                timeZone: "America/New_York"
+            })
         };
 
         // State
-        this.today = new Date();
+        this.today = new Date().toLocaleDateString("en-US", {
+            timeZone: "America/New_York"
+        });
         this.today.setHours(0, 0, 0, 0);
 
         this.state = {
@@ -214,8 +218,15 @@ class BookingCalendar {
     }
 
     attachEventListeners() {
-        this.container.querySelector('#prevMonth').addEventListener('click', () => this.changeMonth(-1));
-        this.container.querySelector('#nextMonth').addEventListener('click', () => this.changeMonth(1));
+        this.container.querySelector('#prevMonth').addEventListener('click', (e) => {
+            e.preventDefault();
+            this.changeMonth(-1);
+        });
+
+        this.container.querySelector('#nextMonth').addEventListener('click', (e) => {
+            e.preventDefault();
+            this.changeMonth(1);
+        });
     }
 
     renderCalendar() {
